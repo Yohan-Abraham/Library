@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 1.7em;
+    margin-bottom: 1em;
+}
+
+#brand {
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 1em;
+}
+
+#add-book {
+    padding: 1em 2em;
+    border-radius: 15px;
+    margin-left: 2em;
+    background-color: black;
+    color: white;
+}
+
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+
+.card {
+    height: 15em;
+    width: 12em;
+    background-color: bisque;
+    padding: 1em;
+}
+
+.card div {
+    padding-bottom: 2em;
+}
