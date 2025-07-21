@@ -22,8 +22,14 @@ function displayBooks() {
 
         const title = document.createElement("div");
         title.className = "title";
-        title.textContent = `Title: ${book.title}`;
+        title.style.fontSize = "1.2rem";
+        title.style.fontWeight = "bold";
+        title.textContent = `${book.title}`;
         card.appendChild(title);
+
+        const filler = document.createElement("div");
+        filler.textContent = "By";
+        card.appendChild(filler);
 
         const author = document.createElement("div");
         author.className = "author";
@@ -45,10 +51,11 @@ function displayBooks() {
     }
 }
 
-
-addBookToLibrary("The prince", "Machivelli", 200, false);
-displayBooks();
+const addBook = document.querySelector("#button");
+const bookInfo = document.querySelector("#book-information");
+const output = document.querySelector("output");
+const confirmBtn = document.querySelector("#confirmBtn");
 
 addBook.addEventListener("click", () => {
-
-}); 
+    bookInfo.showModal();
+});
