@@ -4,11 +4,18 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(15 15 15);
+}
+
 nav {
     background-color: black;
     color: white;
     padding: 1.7em;
     margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #brand {
@@ -17,7 +24,13 @@ nav {
     margin-left: 1em;
 }
 
-#add-book {
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
     padding: 1em 2em;
     border-radius: 15px;
     margin-left: 2em;
@@ -37,6 +50,7 @@ nav {
     background-color: bisque;
     padding: 1em;
     margin: 1em;
+    border-radius: 10px;
 }
 
 .card div {
