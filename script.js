@@ -15,10 +15,10 @@ function addBookToLibrary(title, author, pages, read) {
 function displayBooks() {
     const bookContainer = document.querySelector("#books");
     bookContainer.textContent = "";
-
+    counter = 0;
     for (const book of myLibrary) {
         const card = document.createElement("div");
-        card.id = crypto.randomUUID();
+        card.dataset.id = counter;
         card.className = "card";
 
         const title = document.createElement("div");
@@ -47,6 +47,16 @@ function displayBooks() {
         read.textContent = `Read: ${book.read}`;
         card.appendChild(read);
 
+        const remove = document.createElement("button");
+        remove.classList = "remove";
+        remove.textContent = "Remove";
+        remove.addEventListener("click", () => {
+            //remove book here
+            myLibrary.splice(card.dataset.id, 1);
+            displayBooks();
+        });
+        card.appendChild(remove);
+
         const toggleRead = document.createElement("button");
         toggleRead.className = "toggle-read";
         toggleRead.textContent = "Read";
@@ -57,6 +67,7 @@ function displayBooks() {
         card.appendChild(toggleRead);
 
         bookContainer.appendChild(card);
+        counter++;
 
     }
 }

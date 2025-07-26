@@ -28,7 +28,8 @@ nav {
     color: white;
 }
 
-.toggle-read {
+.toggle-read,
+.remove {
     background-color: black;
     color: white;
 }
