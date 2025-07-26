@@ -28,6 +28,11 @@ nav {
     color: white;
 }
 
+.toggle-read {
+    background-color: black;
+    color: white;
+}
+
 #books {
     display: flex;
     flex-wrap: wrap;

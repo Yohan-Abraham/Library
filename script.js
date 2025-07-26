@@ -47,6 +47,15 @@ function displayBooks() {
         read.textContent = `Read: ${book.read}`;
         card.appendChild(read);
 
+        const toggleRead = document.createElement("button");
+        toggleRead.className = "toggle-read";
+        toggleRead.textContent = "Read";
+        toggleRead.addEventListener("click", () => {
+            book.read = book.read === "Yes" ? "No" : "Yes";
+            read.textContent = `Read: ${book.read}`;
+        });
+        card.appendChild(toggleRead);
+
         bookContainer.appendChild(card);
 
     }
@@ -70,3 +79,7 @@ confirmBtn.addEventListener("click", (event) => {
     displayBooks();
     bookInfo.close();
 });
+
+
+
+
