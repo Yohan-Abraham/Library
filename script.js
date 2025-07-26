@@ -14,6 +14,7 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks() {
     const bookContainer = document.querySelector("#books");
+    bookContainer.textContent = "";
 
     for (const book of myLibrary) {
         const card = document.createElement("div");
@@ -53,9 +54,19 @@ function displayBooks() {
 
 const addBook = document.querySelector("#button");
 const bookInfo = document.querySelector("#book-information");
-const output = document.querySelector("output");
 const confirmBtn = document.querySelector("#confirmBtn");
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const pages = document.querySelector("#pages");
+const read = document.querySelector("#read");
 
 addBook.addEventListener("click", () => {
     bookInfo.showModal();
+});
+
+confirmBtn.addEventListener("click", (event) => {
+    addBookToLibrary(title.value, author.value, pages.value, read.value);
+    event.preventDefault();
+    displayBooks();
+    bookInfo.close();
 });
