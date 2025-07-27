@@ -34,7 +34,7 @@ function displayBooks() {
 
         const author = document.createElement("div");
         author.className = "author";
-        author.textContent = `Author: ${book.author}`;
+        author.textContent = `${book.author}`;
         card.appendChild(author);
 
         const pages = document.createElement("div");
